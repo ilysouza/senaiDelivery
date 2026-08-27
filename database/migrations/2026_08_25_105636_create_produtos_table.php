@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('caminho_imagem')->nullable();
             $table->boolean('ativo')->default(true);
             $table->boolean('destaque')->default(false);
-            $table->foreignId('categoria_id')->references('id')->on('categorias');
+            $table->foreign('categoria_id')->references('id')->on('categorias');
             $table->timestamps();
         });
     }
